@@ -1,10 +1,30 @@
 .hero {
+  position: relative;
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    &::before {
+      @media (max-width: 1050px) {
+        display: none;
+      }
+      position: absolute;
+      content: url("../images/Group3.svg");
+      right: 430px;
+      top: 280px;
+      z-index: 1;
+    }
+    &::after {
+      @media (max-width: 1050px) {
+        display: none;
+      }
+      position: absolute;
+      content: url("../images/Group5.svg");
+      right: 75px;
+      top: 50px;
+      z-index: 1;
+    }
   }
-  position: relative;
   margin-bottom: 30rem;
   @media (max-width: 1050px) {
     margin-bottom: 20rem;
@@ -100,7 +120,7 @@
         height: 253px;
         background-position: top;
         top: 400px;
-        left: 60px;
+        left: 70px;
       }
     }
   }

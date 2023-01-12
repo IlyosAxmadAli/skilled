@@ -490,6 +490,30 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+.hero__container::before {
+  position: absolute;
+  content: url("../images/Group3.svg");
+  right: 430px;
+  top: 280px;
+  z-index: 1;
+}
+@media (max-width: 1050px) {
+  .hero__container::before {
+    display: none;
+  }
+}
+.hero__container::after {
+  position: absolute;
+  content: url("../images/Group5.svg");
+  right: 75px;
+  top: 50px;
+  z-index: 1;
+}
+@media (max-width: 1050px) {
+  .hero__container::after {
+    display: none;
+  }
+}
 @media (max-width: 1050px) {
   .hero {
     margin-bottom: 20rem;
@@ -623,7 +647,7 @@ body {
     height: 253px;
     background-position: top;
     top: 400px;
-    left: 60px;
+    left: 70px;
   }
 }
 
