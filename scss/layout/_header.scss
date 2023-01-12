@@ -1,0 +1,17 @@
+.header {
+  padding-top: 3.8rem;
+  margin-bottom: 15rem;
+  @media (max-width: 1050px) {
+    margin-bottom: 10rem;
+  }
+  @media (max-width: 750px) {
+    margin-bottom: 5rem;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    margin-right: auto;
+  }
+}

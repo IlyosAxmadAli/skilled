@@ -1,0 +1,15 @@
+.footer {
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+  background-color: $footer-btn-bg;
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    margin-right: auto;
+    img path {
+      fill: $while;
+    }
+  }
+}

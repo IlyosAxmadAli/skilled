@@ -1,0 +1,26 @@
+.btn {
+  @media (max-width: 1050px) {
+    @include font($family, 1.6rem, $weight-b, 1.62, $while);
+  }
+  @include font($family, $text-size, $weight-b, $text-height, $while);
+  padding: 1.4rem 3.2rem;
+  border-radius: 50px;
+}
+.header__btn {
+  background-color: $footer-btn-bg;
+  &:hover {
+    background-color: $header-btn-hover;
+  }
+}
+.hero__btn {
+  background: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+  &:hover {
+    background: $hover-color;
+  }
+}
+.footer__btn {
+  background: linear-gradient(180deg, #4851ff -54.32%, #f02aa6 100%);
+  &:hover {
+    background: $hover-color;
+  }
+}

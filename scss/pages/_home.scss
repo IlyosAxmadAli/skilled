@@ -1,0 +1,212 @@
+.hero {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  position: relative;
+  margin-bottom: 30rem;
+  @media (max-width: 1050px) {
+    margin-bottom: 20rem;
+  }
+  @media (max-width: 750px) {
+    margin-bottom: 45rem;
+  }
+  &__info {
+    @media (max-width: 1050px) {
+      width: 400px;
+    }
+    width: 100%;
+    max-width: 457px;
+  }
+  &__title {
+    @media (max-width: 1050px) {
+      @include font($family, 4rem, $weight-exb, 50px, $title-color);
+    }
+    @media (max-width: 750px) {
+      @include font($family, 3.8rem, $weight-exb, 50px, $title-color);
+    }
+    @include font($family, $h1-size, $weight-exb, $h1-height, $title-color);
+    margin-bottom: 2.9rem;
+  }
+  &__text {
+    @media (max-width: 1050px) {
+      @include font($family, 1.6rem, $weight-exb, 1.62, $text-color);
+    }
+    @media (max-width: 750px) {
+      margin-bottom: 2rem;
+      @include font(
+        $family,
+        $text2-size,
+        $weight-m,
+        $text2-height,
+        $text-color
+      );
+    }
+    @include font($family, $text-size, $weight-m, $text-height, $text-color);
+    margin-bottom: 4rem;
+  }
+  &__design {
+    &::before {
+      @media (max-width: 750px) {
+        display: none;
+      }
+      @media (max-width: 1050px) {
+        width: 216px;
+        height: 688px;
+        top: -265px;
+        right: -80px;
+      }
+      content: "";
+      position: absolute;
+      border: 1px;
+      height: 1008px;
+      width: 317px;
+      right: 0;
+      top: -390px;
+      border-radius: 158px;
+      background: linear-gradient(180deg, #4851ff 0%, #f02aa6 100%);
+      border-radius: 158.5px;
+      transform: rotate(45deg);
+    }
+    &::after {
+      @media (max-width: 1050px) {
+        width: 216px;
+        height: 382px;
+        right: 90px;
+        top: -25px;
+        @media (max-width: 1050px) {
+          background: url("../images/hero-img-tab.png"),
+            linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+          background-repeat: no-repeat;
+          background-position: bottom;
+        }
+      }
+      content: "";
+      position: absolute;
+      background: url("../images/hero-img.png"),
+        linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+      background-repeat: no-repeat;
+      background-position: bottom;
+      border: 1px;
+      height: 560px;
+      width: 317px;
+      right: 248px;
+      top: -39px;
+      border-radius: 158px;
+      border-radius: 158.5px;
+      @media (max-width: 750px) {
+        width: 253px;
+        height: 253px;
+        background-position: top;
+        top: 400px;
+        left: 60px;
+      }
+    }
+  }
+}
+
+.grid {
+  width: 100%;
+  padding-bottom: 15rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%);
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+    row-gap: 8rem;
+    @media (max-width: 1150px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 750px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &__item1 {
+    @media (max-width: 750px) {
+      padding: 4rem 3rem;
+    }
+    background: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+    padding: 6rem 3rem 8rem;
+    border-radius: 15px;
+    box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+    border-radius: 15px;
+  }
+  &__item {
+    position: relative;
+    background-color: $while;
+    padding: 6rem 3rem 4rem;
+    border-radius: 15px;
+    box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+    border-radius: 15px;
+    &::before {
+      position: absolute;
+      content: "";
+      background: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+      border: 1px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      top: -30px;
+    }
+    &::after {
+      position: absolute;
+      content: url("../images/Shape1.svg");
+      top: -45px;
+      left: 45px;
+    }
+    &:nth-child(3)::after {
+      position: absolute;
+      content: url("../images/shape2.svg");
+      top: -48px;
+      left: 48px;
+    }
+    &:nth-child(4)::after {
+      position: absolute;
+      content: url("../images/Shape3.svg");
+      top: -50px;
+      left: 47px;
+    }
+    &:nth-child(5)::after {
+      position: absolute;
+      content: url("../images/Shape4.svg");
+      top: -50px;
+      left: 50px;
+    }
+    &:nth-child(6)::after {
+      position: absolute;
+      content: url("../images/Shape5.svg");
+      top: -49px;
+      left: 49px;
+    }
+  }
+  &__title2 {
+    @media (max-width: 1050px) {
+      @include font($family, 2.4rem, $weight-exb, 1.33, $while);
+    }
+    @include font($family, $h2-size, $weight-exb, $h2-height, $while);
+  }
+  &__title3 {
+    @media (max-width: 1050px) {
+      @include font($family, 2rem, $weight-exb, 25px, $title-color);
+    }
+    @include font($family, $h3-size, $weight-exb, $h3-height, $title-color);
+    margin-bottom: 2rem;
+  }
+  &__title4 {
+    @media (max-width: 1050px) {
+      @include font($family, 1.8rem, $weight-exb, 1.56, $grid-link-color);
+    }
+    @include font($family, $h4-size, $weight-exb, $h4-height, $grid-link-color);
+    &:hover {
+      color: $hover-color;
+    }
+  }
+  &__desc {
+    @include font($family, $text2-size, $weight-m, $text2-size, $text-color);
+    margin-bottom: 2.4rem;
+  }
+  .text {
+    margin-bottom: 5.2rem;
+  }
+}

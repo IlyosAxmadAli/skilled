@@ -1,0 +1,21 @@
+@mixin font($family, $textSize, $weight, $line-height, $title-color) {
+  font: {
+    family: $family;
+    size: $textSize;
+    weight: $weight;
+  }
+  line-height: $line-height;
+  color: $title-color;
+}
+
+@mixin responsive($position) {
+  @if $position == tablet {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  } @else if $position == mobile {
+    @media screen and (max-width: 500px) {
+      @content;
+    }
+  }
+}
